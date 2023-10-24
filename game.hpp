@@ -1,4 +1,5 @@
 #pragma once
+#include "prerequisites.h"
 #include <memory>
 
 class OWindow;
@@ -22,4 +23,6 @@ class OGame {
         bool isRunning = true;
         std::unique_ptr<OGraphicsEngine> m_graphicsEngine;
         std::unique_ptr<OWindow> m_display;
+
+        OVertexArrayObjectPtr m_triangleVAO;
 };
