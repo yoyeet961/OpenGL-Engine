@@ -1,7 +1,7 @@
 CFLAGS = -std=c++17
 LDFLAGS = -lopengl32 -lgdi32
 
-SRC = *.c *.cpp # main.cpp glad.c game.cpp
+SRC = *.c *.cpp *.h *.hpp # main.cpp glad.c game.cpp
 OBJ = $(SRC:.cpp=build/o/.o)
 
 all: build/build.exe

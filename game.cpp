@@ -6,6 +6,8 @@
 OGame::OGame() {
     m_graphicsEngine = std::make_unique<OGraphicsEngine>();
     m_display = std::make_unique<OWindow>();
+
+    m_display->makeCurrentContext();
 }
 
 OGame::~OGame() {
@@ -36,14 +38,18 @@ void OGame::quit() {
     isRunning = false;
 }
 
-void onCreate() {
+void OGame::onCreate() {
+    m_graphicsEngine->clear(OVec4(0.0f, 1.0f, 0.0f, 1.0f));
+
+
+
+    m_display->present(false);
+}
+
+void OGame::onUpdate() {
     
 }
 
-void onUpdate() {
-    
-}
-
-void onQuit() {
+void OGame::onQuit() {
     
 }
