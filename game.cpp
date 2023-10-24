@@ -51,12 +51,13 @@ void OGame::quit() {
 
 void OGame::onCreate() {
     const f32 triangleVertices[] = {
-      -0.5f,-0.5f, 0,
+      -0.5f,-0.5f, 0.0f,
       0.5f, -0.5f, 0.0f,
       0.0f, 0.5f, 0.0f
     };
 
-    m_graphicsEngine->createVertexArrayObject({ (void*)triangleVertices, sizeof(f32)*3,3 });
+    m_graphicsEngine->createVertexArrayObject({(void*)triangleVertices, sizeof(f32)*3,3});
+    
 }
 
 /**

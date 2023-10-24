@@ -24,7 +24,13 @@ OVertexArrayObject::~OVertexArrayObject()
     glDeleteVertexArrays(1, &vertexArrayObjectId);
 }
 
-ui32 OVertexArrayObject::getId()
-{
-    return vertexArrayObjectId;
-}
+// ui32 OVertexArrayObject::getId()
+// {
+//     if (vertexArrayObjectId == NULL) {
+//         return 0;
+//     }
+//     else {
+//         return vertexArrayObjectId;
+//     }
+//     //return vertexArrayObjectId;
+// }

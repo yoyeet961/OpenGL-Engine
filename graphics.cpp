@@ -76,7 +76,8 @@ void OGraphicsEngine::setViewport(const ORect& size) {
 }
 
 void OGraphicsEngine::setVertexArrayObject(const OVertexArrayObjectPtr& vao) {
-    glBindVertexArray(vao->getId());
+    // glBindVertexArray(vao->getId());
+    glBindVertexArray(vao->vertexArrayObjectId);
 }
 
 void OGraphicsEngine::drawTriangles(ui32 vertexCount, ui32 offset)
